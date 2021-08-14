@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hust.sortsystem.view.datascene.DataViewController">
+   <children>
+      <ImageView fitHeight="462.0" fitWidth="1048.0" layoutX="1.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@../../image/table.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <GridPane layoutX="207.0" layoutY="407.0" prefHeight="66.0" prefWidth="229.0" style="-fx-background-color: blue; -fx-background-radius: 10; -fx-border-color: red; -fx-border-radius: 10;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="92.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="135.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#setNextStep" text="Next" />
+            <Button fx:id="runStep" mnemonicParsing="false" onAction="#setRunStep" prefHeight="39.0" prefWidth="138.0" text="Run/Pause" GridPane.columnIndex="1" />
+            <Slider fx:id="slider" max="4000.0" min="100.0" value="2000.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="27.0" prefWidth="101.0" text="Max" textAlignment="RIGHT" textFill="#eb0d0d" GridPane.rowIndex="1" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </GridPane>
+      <Label fx:id="sortName" layoutX="392.0" layoutY="1.0" prefHeight="40.0" prefWidth="379.0" textAlignment="CENTER" textFill="#2f00a4">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberSwapLB" layoutX="860.0" layoutY="38.0">
+         <font>
+            <Font name="Dubai Medium" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitBT" layoutX="921.0" layoutY="41.0" mnemonicParsing="false" onAction="#setExitBT" prefHeight="39.0" prefWidth="75.0" text="Exit">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
